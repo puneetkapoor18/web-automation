@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression">
+
+	<!-- <parameter name="environment" value="Staging" /> <parameter name="os" 
+		value="mac" /> <parameter name="browser" value="chrome" /> -->
+
+	<test name="Test">
+		<classes>
+			<class name="com.lps.qa.runner.TestRunner"></class>
+		</classes>
+	</test>
+
+</suite>

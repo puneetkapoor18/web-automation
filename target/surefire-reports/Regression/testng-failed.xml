@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Regression]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.lps.qa.runner.TestRunner">
+        <methods>
+          <include name="login" invocation-numbers="0"/>
+          <include name="beforeEveryCLass"/>
+          <include name="afterEachTestCycle"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUpEnvironment"/>
+        </methods>
+      </class> <!-- com.lps.qa.runner.TestRunner -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Regression] -->
