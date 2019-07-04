@@ -63,27 +63,27 @@ public class TestBase {
 	@AfterTest
 	public void afterEachTestCycle() {
 		// terminate web driver if not terminated
-//		SeleniumBase.quitDriver();
+		SeleniumBase.quitDriver();
 	}
 
-//	@AfterSuite(alwaysRun = true)
-//	public void afterSuite() {
-//
-//		File f = new File(System.getProperty("user.dir")+System.getProperty("file.separator")+PropertiesUtil.getConstantProperty("reportPath"));
-//
-//		if(f.exists()){
-//
-//			EmailUtil.sendEmail(System.getProperty("user.dir")+System.getProperty("file.separator")+PropertiesUtil.getConstantProperty("reportPath"),
-//					PropertiesUtil.getConstantProperty("EmailReciever"),
-//					PropertiesUtil.getConstantProperty("EmailSender"),
-//					PropertiesUtil.getConstantProperty("EmailPassword"),
-//					PropertiesUtil.getConstantProperty("EmailReportSubject"),
-//					PropertiesUtil.getConstantProperty("EmailReportBody"));
-//		}else{
-//			System.out.println("REPORT FILE NOT CREATED");
-//		}
-//
-//	}
+	@AfterSuite(alwaysRun = true)
+	public void afterSuite() {
+
+		File f = new File(System.getProperty("user.dir")+System.getProperty("file.separator")+PropertiesUtil.getConstantProperty("reportPath"));
+
+		if(f.exists()){
+
+			EmailUtil.sendEmail(System.getProperty("user.dir")+System.getProperty("file.separator")+PropertiesUtil.getConstantProperty("reportPath"),
+					PropertiesUtil.getConstantProperty("EmailReciever"),
+					PropertiesUtil.getConstantProperty("EmailSender"),
+					PropertiesUtil.getConstantProperty("EmailPassword"),
+					PropertiesUtil.getConstantProperty("EmailReportSubject"),
+					PropertiesUtil.getConstantProperty("EmailReportBody"));
+		}else{
+			System.out.println("REPORT FILE NOT CREATED");
+		}
+
+	}
 
 
 }

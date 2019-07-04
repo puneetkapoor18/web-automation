@@ -16,23 +16,6 @@ public class ResultsOutbound extends SeleniumBase{
 		PageFactory.initElements(driver, this);
 	}
 
-
-//	@FindBy(xpath = "//span[@class='jss471 test-priceWholeValue']")
-//	public List<WebElement> wholePrice;
-//
-//	@FindBy(xpath = "//span[@class='jss473 test-priceCentsValue']")
-//	public List<WebElement> centPrice;
-//
-////	@FindBy(xpath = "//span[@class='jss385']")
-////	public List<WebElement> selectBtn;
-//	
-//	@FindBy(xpath = "//div[@class='buttonWrapper-0-114 test-toggler']")
-//	public List<WebElement> toggleBtn;
-//	
-//	@FindBy(xpath = "//div[@class='selectButtonArea-0-215']")
-//	public List<WebElement> selectBtn;
-	
-	
 	@FindBy(xpath = "//span[contains(@class,'test-priceWholeValue')]")
 	public List<WebElement> wholePrice;
 
@@ -70,13 +53,6 @@ public class ResultsOutbound extends SeleniumBase{
 		}
 		return isSorted;
 	}
-	
-//	public String clickSelectBtn(String index) {
-//		
-//		String price = selectBtn.get(Integer.parseInt(index)).getText();
-//		selectBtn.get(Integer.parseInt(index)).click();
-//		return price;
-//	}
 	
 	public void showPriceToSelectForDeparture(String index) {
 		

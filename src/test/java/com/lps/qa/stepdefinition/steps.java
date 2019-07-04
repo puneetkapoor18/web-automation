@@ -52,7 +52,7 @@ public class steps extends SeleniumBase {
 		long pageLoadTimeMilliSecond = pageLoad.getTime();
         long pageLoadTimeSeconds = pageLoadTimeMilliSecond / 1000;
 		System.out.println("Total Time for page load :: "+pageLoadTimeSeconds); 
-//		Assert.assertEquals(pageLoadTimeSeconds,3.5);
+		Assert.assertEquals(pageLoadTimeSeconds,3.5);
 		
 	}
 	
@@ -79,7 +79,7 @@ public class steps extends SeleniumBase {
 		System.out.println("Total Time for page load 2 in millis:: "+pageLoadTimeMilliSecond);
         long pageLoadTimeSeconds = pageLoadTimeMilliSecond / 1000;
 		System.out.println("Total Time for page load 2 :: "+pageLoadTimeSeconds);
-//		Assert.assertEquals(pageLoadTimeSeconds,3.5);
+		Assert.assertEquals(pageLoadTimeSeconds,3.5);
 		
 		
 	}
@@ -107,7 +107,7 @@ public class steps extends SeleniumBase {
 		System.out.println("Total Time for page load 3 in millis:: "+pageLoadTimeMilliSecond);
         long pageLoadTimeSeconds = pageLoadTimeMilliSecond / 1000;
 		System.out.println("Total Time for page load 3 :: "+pageLoadTimeSeconds);
-//		Assert.assertEquals(pageLoadTimeSeconds,3.5);
+		Assert.assertEquals(pageLoadTimeSeconds,3.5);
 		
 	}
 	

@@ -13,7 +13,7 @@ public class SessionTimeout extends SeleniumBase{
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath = "/html[1]/body[1]/div[10]/div[2]/div[1]/div[1]/h2[1]")
+	@FindBy(xpath = "//div[@role='document']//h2")
 	public WebElement sessionTimeoutMsg;
 	
 	

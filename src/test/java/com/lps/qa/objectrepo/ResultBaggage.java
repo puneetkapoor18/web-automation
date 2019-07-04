@@ -13,28 +13,6 @@ public class ResultBaggage extends SeleniumBase {
 		PageFactory.initElements(driver, this);
 	}
 	
-//	@FindBy(xpath = "//span[@class='jss284']//*[@class='jss253 test-priceSummaryReviewHeaderExpand']")
-//	public WebElement expandBtn;
-//
-//	@FindBy(xpath = "//div[@data-price-item-label='Servicing Fee']//span[@class='test-priceWholeValue']")
-//	public WebElement serviceFeeWholePrice;
-//	
-//	@FindBy(xpath = "//div[@data-price-item-label='Servicing Fee']//span[@class='test-priceCentsValue']")
-//	public WebElement serviceFeeCentPrice;
-//	
-//	@FindBy(xpath = "//div[@data-price-item-label='Merchant Fee']//span[@class='test-priceWholeValue']")
-//	public WebElement merchantFeeWholePrice;
-//	
-//	@FindBy(xpath = "//div[@data-price-item-label='Merchant Fee']//span[@class='test-priceCentsValue']")
-//	public WebElement merchantFeeCentPrice;
-//	
-//	@FindBy(xpath = "//span[@class='jss552 test-priceWholeValue']")
-//	public WebElement totalWholePrice;
-//	
-//	@FindBy(xpath = "//span[@class='jss554 test-priceCentsValue']")
-//	public WebElement totalCentPrice;
-	
-	
 	@FindBy(xpath = "//*[contains(@class,'test-priceSummaryReviewHeaderExpand')]")
 	public WebElement expandBtn;
 
