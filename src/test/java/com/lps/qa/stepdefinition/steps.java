@@ -45,6 +45,7 @@ public class steps extends SeleniumBase {
 	@Given("^user click on the search$")
 	public void clickSearch() throws InterruptedException {
 		
+		boolean flag = false;
 		StopWatch pageLoad = new StopWatch();
 		pageLoad.start();
 		homePage.clickSearch();
@@ -52,7 +53,9 @@ public class steps extends SeleniumBase {
 		long pageLoadTimeMilliSecond = pageLoad.getTime();
         long pageLoadTimeSeconds = pageLoadTimeMilliSecond / 1000;
 		System.out.println("Total Time for page load :: "+pageLoadTimeSeconds); 
-		Assert.assertEquals(pageLoadTimeSeconds,3.5);
+		if (pageLoadTimeSeconds <= 3.5)
+			flag = true;
+		Assert.assertTrue(flag,"Page load time is more than 3.5 sec");
 		
 	}
 	
@@ -67,6 +70,7 @@ public class steps extends SeleniumBase {
 	@Given("^user select the \"([^\"]*)\" price for Departing Flight$")
 	public void selectPriceForDepartingFlight(String index) {
 		
+		boolean flag = false;
 		departingPrice = resultPage.getDeparturePrice(index);
 		System.out.println("departingPrice :: "+departingPrice);
 		resultPage.showPriceToSelectForDeparture(index);
@@ -79,7 +83,9 @@ public class steps extends SeleniumBase {
 		System.out.println("Total Time for page load 2 in millis:: "+pageLoadTimeMilliSecond);
         long pageLoadTimeSeconds = pageLoadTimeMilliSecond / 1000;
 		System.out.println("Total Time for page load 2 :: "+pageLoadTimeSeconds);
-		Assert.assertEquals(pageLoadTimeSeconds,3.5);
+		if (pageLoadTimeSeconds <= 3.5)
+			flag = true;
+		Assert.assertTrue(flag,"Page load time is more than 3.5 sec");
 		
 		
 	}
@@ -95,6 +101,7 @@ public class steps extends SeleniumBase {
 	@Given("^user select the \"([^\"]*)\" price for Inbound Flight$")
 	public void selectPriceForInboundFlight(String index) {
 		
+		boolean flag = false;
 		inboundPrice = resultInboundPage.getArrivalPrice(index);
 		System.out.println("inboundPrice :: "+ inboundPrice);
 		resultInboundPage.showPriceToSelectForArrival(index);
@@ -107,7 +114,11 @@ public class steps extends SeleniumBase {
 		System.out.println("Total Time for page load 3 in millis:: "+pageLoadTimeMilliSecond);
         long pageLoadTimeSeconds = pageLoadTimeMilliSecond / 1000;
 		System.out.println("Total Time for page load 3 :: "+pageLoadTimeSeconds);
-		Assert.assertEquals(pageLoadTimeSeconds,3.5);
+		
+		if (pageLoadTimeSeconds <= 3.5)
+			flag = true;
+		Assert.assertTrue(flag,"Page load time is more than 3.5 sec");
+
 		
 	}
 	
@@ -129,7 +140,7 @@ public class steps extends SeleniumBase {
 		
 		sleepThread(1800000);
 		String message = sessionTimeout.getSessionTimeoutMsg();
-		
+		System.out.println("Timeout message :: " +message);
 		Assert.assertEquals(msg, message,"Time out message is not same");
 		
 	}
