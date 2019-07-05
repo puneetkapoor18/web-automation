@@ -70,7 +70,7 @@ public class ResultsOutbound extends SeleniumBase{
 	
 	public void clickSelectBtnForDeparture(String index) {
 	
-//		fluentWait(selectBtn.get(Integer.parseInt(index)), 5);
+		fluentWait(selectBtn.get(Integer.parseInt(index)), 5);
 		selectBtn.get(Integer.parseInt(index)).click();
 	}
 	
