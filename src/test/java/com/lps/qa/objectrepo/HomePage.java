@@ -30,10 +30,10 @@ public class HomePage extends SeleniumBase{
 	@FindBy(xpath = "//span[@class='destination-autocomplete__item']")
 	public List<WebElement> flyingToCity;
 	
-	@FindBy(xpath = "//span[contains(text(),'15')]")
+	@FindBy(xpath = "//div[@class='trip-dates__depart-date-dialog']//span[contains(text(),'15')]")
 	public WebElement departDateWindow;
 	
-	@FindBy(xpath = "//body[@class='html front not-logged-in no-sidebars page-homepage fc-homepage fclCarousel-processed']//div[@class='trip-dates__return-date-dialog']//div//div//div//div//div//div//div//div//div[3]//button[6]")
+	@FindBy(xpath = "//div[@class='trip-dates__return-date-dialog']//span[contains(text(),'20')]")
 	public WebElement arriveDateWindow;
 
 	
