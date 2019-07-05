@@ -50,10 +50,10 @@ public class steps extends SeleniumBase {
 		pageLoad.start();
 		homePage.clickSearch();
 		pageLoad.stop();
-		long pageLoadTimeMilliSecond = pageLoad.getTime();
-        long pageLoadTimeSeconds = pageLoadTimeMilliSecond / 1000;
+		Double pageLoadTimeMilliSecond = (double) pageLoad.getTime();
+        Double pageLoadTimeSeconds = pageLoadTimeMilliSecond / 1000;
 		System.out.println("Total Time for page load :: "+pageLoadTimeSeconds); 
-		if (pageLoadTimeSeconds <= Long.parseLong(PropertiesUtil.getEnvConfigProperty("Timeout")))
+		if (pageLoadTimeSeconds <= Double.parseDouble(PropertiesUtil.getEnvConfigProperty("Timeout")))
 			flag = true;
 		Assert.assertTrue(flag,"Page load time is more than 3.5 sec");
 		
@@ -79,11 +79,11 @@ public class steps extends SeleniumBase {
 		pageLoad.start();
 		resultPage.clickSelectBtnForDeparture(index);
 		pageLoad.stop();
-		long pageLoadTimeMilliSecond = pageLoad.getTime();
+		Double pageLoadTimeMilliSecond = (double) pageLoad.getTime();
 		System.out.println("Total Time for page load 2 in millis:: "+pageLoadTimeMilliSecond);
-        long pageLoadTimeSeconds = pageLoadTimeMilliSecond / 1000;
+		Double pageLoadTimeSeconds = pageLoadTimeMilliSecond / 1000;
 		System.out.println("Total Time for page load 2 :: "+pageLoadTimeSeconds);
-		if (pageLoadTimeSeconds <= Long.parseLong(PropertiesUtil.getEnvConfigProperty("Timeout")))
+		if (pageLoadTimeSeconds <= Double.parseDouble(PropertiesUtil.getEnvConfigProperty("Timeout")))
 			flag = true;
 		Assert.assertTrue(flag,"Page load time is more than 3.5 sec");
 		
@@ -110,12 +110,12 @@ public class steps extends SeleniumBase {
 		pageLoad.start();
 		resultInboundPage.clickSelectBtnForArrival(index);
 		pageLoad.stop();
-		long pageLoadTimeMilliSecond = pageLoad.getTime();
+		Double pageLoadTimeMilliSecond = (double) pageLoad.getTime();
 		System.out.println("Total Time for page load 3 in millis:: "+pageLoadTimeMilliSecond);
-        long pageLoadTimeSeconds = pageLoadTimeMilliSecond / 1000;
+		Double pageLoadTimeSeconds = pageLoadTimeMilliSecond / 1000;
 		System.out.println("Total Time for page load 3 :: "+pageLoadTimeSeconds);
 		
-		if (pageLoadTimeSeconds <= Long.parseLong(PropertiesUtil.getEnvConfigProperty("Timeout")))
+		if (pageLoadTimeSeconds <= Double.parseDouble(PropertiesUtil.getEnvConfigProperty("Timeout")))
 			flag = true;
 		Assert.assertTrue(flag,"Page load time is more than 3.5 sec");
 
