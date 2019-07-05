@@ -53,7 +53,7 @@ public class steps extends SeleniumBase {
 		long pageLoadTimeMilliSecond = pageLoad.getTime();
         long pageLoadTimeSeconds = pageLoadTimeMilliSecond / 1000;
 		System.out.println("Total Time for page load :: "+pageLoadTimeSeconds); 
-		if (pageLoadTimeSeconds <= 3.5)
+		if (pageLoadTimeSeconds <= Long.parseLong(PropertiesUtil.getEnvConfigProperty("Timeout")))
 			flag = true;
 		Assert.assertTrue(flag,"Page load time is more than 3.5 sec");
 		
@@ -83,7 +83,7 @@ public class steps extends SeleniumBase {
 		System.out.println("Total Time for page load 2 in millis:: "+pageLoadTimeMilliSecond);
         long pageLoadTimeSeconds = pageLoadTimeMilliSecond / 1000;
 		System.out.println("Total Time for page load 2 :: "+pageLoadTimeSeconds);
-		if (pageLoadTimeSeconds <= 3.5)
+		if (pageLoadTimeSeconds <= Long.parseLong(PropertiesUtil.getEnvConfigProperty("Timeout")))
 			flag = true;
 		Assert.assertTrue(flag,"Page load time is more than 3.5 sec");
 		
@@ -115,7 +115,7 @@ public class steps extends SeleniumBase {
         long pageLoadTimeSeconds = pageLoadTimeMilliSecond / 1000;
 		System.out.println("Total Time for page load 3 :: "+pageLoadTimeSeconds);
 		
-		if (pageLoadTimeSeconds <= 3.5)
+		if (pageLoadTimeSeconds <= Long.parseLong(PropertiesUtil.getEnvConfigProperty("Timeout")))
 			flag = true;
 		Assert.assertTrue(flag,"Page load time is more than 3.5 sec");
 
