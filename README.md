@@ -1,4 +1,4 @@
-Command to run the project :-  mvn verify -Dos=mac/win -Dbrowser=chrome -Denvironment=Staging
+Command to run the project :-  mvn verify -Dbrowser=chrome -Denvironment=Staging
 
 
 Report File is generated under target/cucumber-reports
