@@ -42,14 +42,15 @@ public class TestBase {
 	}
 
 	@BeforeClass
-	@Parameters({"os","browser"})
-	public void beforeEveryCLass( @Optional("mac")String os, @Optional("chrome")String br) throws Exception{
-		operatingSystem = os;
+//	@Parameters({"os","browser"})
+	@Parameters({"browser"})
+	public void beforeEveryClass(@Optional("chrome")String br) throws Exception{
+		operatingSystem = System.getProperty("os.name");
 		browser = br;
 
 		testRunner = new TestNGCucumberRunner(this.getClass());
 		
-		SeleniumBase.initializeDriver(br,os);
+		SeleniumBase.initializeDriver(br,operatingSystem);
 	}
 
 

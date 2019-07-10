@@ -172,7 +172,7 @@
 
 					<systemPropertyVariables>
 						<environment>${environment}</environment>
-						<os>${os}</os>
+						<!-- <os>${os}</os> -->
 						<browser>${browser}</browser>
 					</systemPropertyVariables>
 

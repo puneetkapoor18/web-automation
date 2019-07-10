@@ -81,12 +81,12 @@ public class SeleniumBase {
 		}
 		else if(browser.equalsIgnoreCase("chrome"))
 		{
-			if(os.equalsIgnoreCase("win"))
+			if(os.startsWith("Windows"))
 			{
 				System.setProperty("webdriver.chrome.driver",
 							System.getProperty("user.dir")+System.getProperty("file.separator")+PropertiesUtil.getConstantProperty("WindowsChromeDriver"));
 			}
-			else if(os.equalsIgnoreCase("mac")) {
+			else if(os.startsWith("Mac")) {
 				System.setProperty("webdriver.chrome.driver",
 						System.getProperty("user.dir")+System.getProperty("file.separator")+PropertiesUtil.getConstantProperty("MacChromeDriver"));
 
